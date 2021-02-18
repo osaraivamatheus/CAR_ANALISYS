@@ -113,13 +113,6 @@ eixo_seta()
 
 ```
 
-    findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
-
-
-
-    
-![png](output_3_1.png)
-    
 
 
 # Coletando dados Ibovespa
@@ -158,11 +151,6 @@ eixo_seta()
 ```
 
 
-    
-![png](output_5_0.png)
-    
-
-
 # Calculando estatísticas descritivas
 
 
@@ -191,85 +179,12 @@ tabela.columns=['Mínimo','Máximo','Média','Variância','Desvio Padrão']
 tabela
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Mínimo</th>
-      <th>Máximo</th>
-      <th>Média</th>
-      <th>Variância</th>
-      <th>Desvio Padrão</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>BBAS3.SA</th>
-      <td>-0.2407</td>
-      <td>0.8277</td>
-      <td>0.2603</td>
-      <td>0.0583</td>
-      <td>0.2415</td>
-    </tr>
-    <tr>
-      <th>BBDC4.SA</th>
-      <td>-0.5395</td>
-      <td>0.3784</td>
-      <td>-0.0147</td>
-      <td>0.0464</td>
-      <td>0.2154</td>
-    </tr>
-    <tr>
-      <th>ITSA4.SA</th>
-      <td>-0.1822</td>
-      <td>0.8126</td>
-      <td>0.4534</td>
-      <td>0.0507</td>
-      <td>0.2252</td>
-    </tr>
-    <tr>
-      <th>Bovespa</th>
-      <td>-1.1581</td>
-      <td>-0.6658</td>
-      <td>-0.9985</td>
-      <td>0.0005</td>
-      <td>0.0005</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 # Boxplot dos retornos
 
 
 ```python
 dados.boxplot(figsize=[16,5], grid=False);
 ```
-
-
-    
-![png](output_9_0.png)
-    
-
 
 # Autocorrelação dos retornos de cada série
 
@@ -286,12 +201,6 @@ for i in range(3):
 
 ```
 
-
-    
-![png](output_11_0.png)
-    
-
-
 # FAC dos retornos das séries diferenciadas
 
 
@@ -304,12 +213,6 @@ for i in range(3):
     ax[i].spines['top'].set_visible(False)
     ax[i].spines['right'].set_visible(False)
 ```
-
-
-    
-![png](output_13_0.png)
-    
-
 
 # Teste de raiz unitária (Dickey Fuller aumentado) para as séries diferenciadas
 
@@ -346,12 +249,6 @@ for i in range(3):
     ax[i].set_xlabel('')
 ```
 
-
-    
-![png](output_17_0.png)
-    
-
-
 # FAC e FACP das séries diferenciadas
 
 
@@ -374,13 +271,6 @@ for j in range(3):
     ax[1,j].spines['right'].set_visible(False)
 
 ```
-
-
-    
-![png](output_19_0.png)
-    
-
-
 # AIC e EQM dos primeiros modelos
 
 
@@ -413,61 +303,6 @@ pd.DataFrame({'aic m1':aicsm1,
               'eqm m1': eqmsm1,
                'eqm m2': eqmsm2})
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>aic m1</th>
-      <th>aic m2</th>
-      <th>eqm m1</th>
-      <th>eqm m2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>-16604.805804</td>
-      <td>-16623.017766</td>
-      <td>0.125701</td>
-      <td>0.125936</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>-17840.552038</td>
-      <td>-17861.395748</td>
-      <td>0.046381</td>
-      <td>0.046560</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>-18415.202252</td>
-      <td>-18429.339525</td>
-      <td>0.256051</td>
-      <td>0.256197</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
 
 # Resultados dos novos modelos
 
@@ -523,15 +358,6 @@ for i in range(3):
 
 ```
 
-    findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
-
-
-
-    
-![png](output_23_1.png)
-    
-
-
 # Análise de resíduos dos modelos ajustados
 
 
@@ -552,12 +378,6 @@ for i in range(3):
     ax[i].spines['top'].set_visible(False)
     ax[i].spines['right'].set_visible(False)
 ```
-
-
-    
-![png](output_25_0.png)
-    
-
 
 # Gráfico dos ajustes
 
@@ -591,13 +411,6 @@ for i in range(3):
     ax.spines['right'].set_visible(False)
 
 ```
-
-
-    
-![png](output_27_0.png)
-    
-
-
 # Teste de independência dos resíduos (Ljung-Box)
 
 
@@ -613,15 +426,6 @@ plt.legend(loc='upper right')
 eixo_seta()
 ```
 
-    findfont: Font family ['serif'] not found. Falling back to DejaVu Sans.
-
-
-
-    
-![png](output_29_1.png)
-    
-
-
 # Histograma dos retornos de cada série
 
 
@@ -634,10 +438,3 @@ for i in range(3):
     ax[i].spines['right'].set_visible(False)
 
 ```
-
-
-    
-![png](output_31_0.png)
-    
-
-
